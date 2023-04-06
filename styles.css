@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Cheddar Gothic Stencil';
+    src: url('fonts/CheddarGothicStencil.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F0ECDD;
+    color: #008056; /* Add this line */
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Cheddar Gothic Stencil', sans-serif;
+    font-size: 64px;
+    color: #003027; /* Add this line */
+}
+
+.image-link {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid black;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.image-link img {
+    width: 200px;
+    height: auto;
+}
+
+.image-link p {
+    font-family: 'Cheddar Gothic Stencil', sans-serif;
+    color: #003027; 
+    font-size: 24px;
+    
+    padding: 5px;
+    margin-top: 10px;
+    transition: border 0.3s;
+}
+
+.image-link:hover {
+    transform: scale(1.2);
+}
+
+.image-link:hover p {
+    border: none;
+    color: #008056; /* Add this line */
+}
+

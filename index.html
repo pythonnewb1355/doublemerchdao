@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Merch DAO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Double Merch DAO</h1>
+    <div class="content">
+        <!-- Add image elements manually -->
+        <div class="image-link">
+            <img src="Bears/6206.png" alt="Okay Bears #6206">
+            <p>Okay Bears #6206</p>
+            <button onclick="deleteImage(this)">Delete</button>
+        </div>
+        <div class="image-link">
+            <img src="Bears/4820.png" alt="Okay Bears #4820">
+            <p>Okay Bears #4820</p>
+            <button onclick="deleteImage(this)">Delete</button>
+        </div>
+        <div class="image-link">
+            <img src="Bears/5257.png" alt="Okay Bears #5257">
+            <p>Okay Bears #5257</p>
+            <button onclick="deleteImage(this)">Delete</button>
+        </div>        
+        <!-- ... -->
+        <!-- Add the rest of the image elements in the same format -->
+    </div>
+    <script>
+        function addImage() {
+            var url = prompt("Please enter the image URL:");
+            var number = prompt("Please enter the number to add:");
+            if (url != null && number != null) {
+                var filename = url.substring(url.lastIndexOf('/')+1);
+                var img = document.createElement('img');
+                img.setAttribute('src', url);
+                img.setAttribute('alt', 'Okay Bears ' + filename);
+                var p = document.createElement('p');
+                p.innerText = 'Okay Bears #' + number;
+                var div = document.createElement('div');
+                div.classList.add('image-link');
+                div.appendChild(img);
+                div.appendChild(p);
+                var deleteButton = document.createElement('button');
+                deleteButton.innerText = 'Delete';
+                deleteButton.onclick = function() {
+                    deleteImage(this);
+                };
+                div.appendChild(deleteButton);
+                document.querySelector('.content').appendChild(div);
+            }
+        }
+
+        function deleteImage(button) {
+            button.parentNode.parentNode.removeChild(button.parentNode);
+        }
+    </script>
+    <button onclick="addImage()">Add Image</button>
+</body>
+</html>
