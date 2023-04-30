@@ -1,0 +1,20 @@
+{
+  "name": "solana-wallet-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-base": "^0.9.22",
+    "@solana/wallet-adapter-phantom": "^0.9.22",
+    "@solana/web3.js": "^1.75.0",
+    "buffer": "^6.0.3"
+  }
+}
